@@ -1,0 +1,37 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let passenger of passengers">
+            <td>{{passenger.firstName}}</td>
+            <td>{{passenger.lastName}}</td>
+            <td>{{passenger.email}}</td>
+        </tr>
+    </tbody>
+</table>
+<div class="row">
+    <div class="form-group col-sm">
+        <label for="name">First Name</label>
+        <input type="text" class="form-control" id="firstName" required [(ngModel)]="passenger.firstName"
+            name="firstName">
+    </div>
+
+    <div class="form-group col-sm">
+        <label for="name">Last Name</label>
+        <input type="text" class="form-control" id="lastName" required [(ngModel)]="passenger.lastName" name="lastName">
+    </div>
+
+    <div class="form-group col-sm">
+        <label for="name">Email</label>
+        <input type="text" class="form-control" id="email" required [(ngModel)]="passenger.email" name="email">
+    </div>
+    <div class=".form-group col-sm">
+        <br>
+        <button class="btn btn-primary" (click)="addPassenger(passenger)">Add User</button>
+    </div>
+</div>
