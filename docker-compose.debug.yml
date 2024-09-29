@@ -1,13 +1,11 @@
-version: '3.4'
-
 services:
   passengerui:
-    image: passengerui
+    image: passenger-ui-image
     build:
       context: .
       dockerfile: ./Dockerfile
     environment:
       JAVA_OPTS: -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005,quiet=y
     ports:
-      - 3000:3000
+      - 80:80
       - 5005:5005
