@@ -1,8 +1,0 @@
-services:
-  passenger-ui-image:
-    image: passenger-ui-image
-    build:
-      context: .
-      dockerfile: ./Dockerfile
-    ports:
-      - 80:80
